@@ -451,9 +451,369 @@ print(a<<2,bin(a<<2))
 '''
 
 # bitwise right shift (>>)
+'''
 a=12 print(a,bin(a))
 print(a>>2,bin(a>>2))
+'''
+
+#8> Ternary operator
 
 '''
-8> ternary operator
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+val = "%d is greater" %num1 if(num1>num2)\
+else "both number is same" if(num1==num2)\
+else "%d is greater"%num2
+print(val)
+''' 
+
 '''
+num1 = int(input("Enter first number")) #23  #13
+num2 = int(input("Enter second number")) #12  #22
+num3 = int(input("Enter third number")) #21  #50
+val = num1 if(num1>=num2 and num1>=num3) else num2 if(num2>=num3) else num3
+print(val,"is greatest")
+'''
+# Ternary operator using tuple 
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+val((num2,num1) [num1>=num2])
+print(val,"is greatest")              # True me right side ....... False me left side 
+'''
+
+# Ternary operator using lambda expression
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+val =((lambda:num2,lambda:num1) [num1>=num2] ())
+print(val,"is greatest")
+'''
+
+# Ternary operator using dictionary
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+val =({True:num1,False:num2} [num1>=num2])
+print(val,"is greatest")
+'''
+
+# CONTROL STATEMENT    03-06-2019
+'''
+1> if else statement 
+2> if elif else statement 
+3> nested if else statement 
+'''
+# 1> if else statement 
+'''
+syntax
+
+if (condition):
+	block of if 
+else:
+	block of else
+'''
+# detect either person is eligible for vote in india or not
+'''
+age = int(input("Enter an age:"))
+if(age>=18):
+	print("you are eligible for voting in india.")
+else:
+	print("you are not eligible to vote in india.")
+'''
+
+# Detect either number is odd or even 
+'''
+num = int(input("Enter a number"))
+if(num%2==0):
+	print(num,"is even number.")
+else:
+	print(num,"is an odd number.")
+'''
+# 2> if elif else statement
+'''
+syntax:
+
+if(condition):
+	block of if
+elif(condition):
+	block of first elif
+elif(statement):
+	block of second elif:
+---------------------------
+---------------------------
+---------------------------
+if(condition):
+	block of n elif
+	else:
+	block of else
+'''
+
+# Detect greatest number among three numbers
+'''
+num = int(input("Enter first number"))
+num1 = int(input("Enter second number"))
+num2 = int(input("Enter third number"))
+if(num>=num1 and num>=num2):
+	print(num,"is the greatest number.")
+elif(num1>=num2 and num1>=num2):
+	print(num1,"is the greatest number.")
+else:
+	print(num2,"is the greatestnumber.")
+'''	
+
+#isinstance
+'''
+val = 2000.9
+print(isinstance(val,str))
+print(isinstance(val,int))
+print(isinstance(val,float))
+'''
+
+#NOTested if else statement
+'''
+syntax 
+if (condition):
+	if(condition):
+		block of if
+	else:
+		block of else
+else:
+	if(condition):
+		block of if
+	else:
+		block of else
+'''
+'''
+age = int(input("Enter an age:"))
+if(age<=0 or age>=100):
+	print("invalid input")
+else:
+	if(age>=18):
+		print("you are eligible for voting in india")
+	else:
+		print("you are not eligible to vote in india")
+'''
+
+# LEAP YEAR
+'''
+num = int(input("Enter the year"))
+if(num%4==0):
+	if(num%100==0):
+		if(num%400==0):
+			print(num,"year is leap year")
+		else:
+			print(num,"not a leap year")
+	else:
+		print(num, "is a leap year")
+else:
+	print(num,"is not a leap year")
+'''
+
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+num3 = int(input("Enter third number"))
+if(num1==num2==num3):
+	print("All elements are equal")
+elif(num1==num2):
+	print(num1,num2,"The two elements are equal")
+	if(num1>num2 and num1>num3):
+			print(num1,"is the greatest")
+	elif(num2>num1 and num2>num3):	
+			print(num2,"is the greatest")
+	else:	
+			print(num3,"is the greatest")
+elif(num2==num3):
+	print(num2,num3,"The two elements are equal")
+	if(num2>num3 and num2>num1):
+			print(num2,"is the greatest")
+	elif(num3>num2 and num3>num2):	
+			print(num3,"is the greatest")
+	else:	
+			print(num1,"is the greatest")
+elif(num3==num1):
+	print(num3,num1,"The two elements are equal")
+	if(num3>num1 and num3>num2):
+			print(num3,"is the greatest")
+	elif(num1>num2 and num1>num3):	
+			print(num1,"is the greatest")
+	else:	
+			print(num2,"is the greatest")
+elif(num1!=num2!=num3):
+	if(num1>num2 and num1>num3):
+			print(num1,"is greatest")
+	elif(num2>num1 and num2>num3):
+			print(num2,"is greatest")
+	elif(num3>num1 and num3>num2):
+			print(num3,"is greatest")
+'''
+# SWAPPING	
+# 1> Swapping using Temporary variable
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+print("First number before swapping is",num1)
+print("Second number before swapping is",num2)
+temp = num1
+num1 = num2
+num2 = temp
+print("First number after swapping is",num1)
+print("Second number after swapping is",num2)
+'''
+
+# 2> Swapping using multiple variable assignment
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+print("First number before swapping is",num1)
+print("Second number before swapping is",num2)
+num1,num2=num2,num1
+print("First number after swapping is",num1)
+print("Second number after swapping is",num2)
+'''
+
+# 3> Swappingusing arithmetic operation
+'''
+num1 = int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+print("First number before swapping is",num1)
+print("Second number before swapping is",num2)
+num1 = num1 + num2    # 3 + 6 = 9
+num2 = num1 - num2    # 9 - 6 = 3
+num1 = num1 - num2    # 9 - 3 = 6
+print("First number after swapping is",num1)
+print("Second number after swapping is",num2)
+'''
+
+# LOOP
+'''
+1. Pretested Loop
+	a> While Loop
+	b> For Loop
+2. Post Tested Loop
+	a> Do While Loop
+# Note - post tested loop has been removed from pyhton .
+'''
+
+# A> While Loop
+'''
+--> while is a keyword which is used to create loop.
+--. while loop are responsible for executing a block of statement more than one time.
+
+ Syntax:
+ 
+ while(condition):
+	block of while	
+	increment or decrement or pass or continue or break
+--> block of while statment will execute till condition will be true.
+'''
+
+# INFINITE LOOP 
+'''
+while(True):
+	print("infinite")
+'''
+
+# MAKE FINITE LOOP FROM INFINITE LOOP
+'''
+rang = int(input("Enter a range"))
+ctr = 0
+while(True):
+	print("finite")
+	ctr=ctr+1
+	if(ctr==rang):
+		break
+'''
+
+# FINITE LOOP USING VARIABILITY IN CONDITION
+
+# detect first 10 natural number
+'''
+ctr = 1
+while(ctr<=10):
+	print(ctr)
+	ctr = ctr + 1
+'''	
+	
+# detect first 10 natural number and print sum of 10 natural numbers
+'''
+ctr = 1
+sum = 0
+while(ctr<=10):
+	print(ctr)
+	sum = sum + ctr
+	ctr = ctr + 1
+print("Sum of first %d natural number is %d"%(ctr-1,sum))
+'''
+
+'''
+ctr = 1
+sum = 0
+while(ctr<=10):
+	print(ctr,end=" ")
+	sum = sum + ctr
+	ctr = ctr + 1
+print("Sum of first %d natural number is %d"%(ctr-1,sum))
+'''
+
+# Detect even or odd in range
+'''
+rang = int(input("Enter a range"))
+ctr = 0 
+while(ctr<=rang):
+	if(ctr%2==0):
+		print(ctr,"is an even number")
+	else:
+		print(ctr,"is an odd number")
+	ctr = ctr +1
+'''
+
+# Detect even or odd between two range
+'''
+range1 = int(input("Enter first range"))
+range2 = int(input("Enter second range"))
+if(range1>range2):
+	range1,range2 = range2,range1
+while(range1<=range2):
+	if(range1&2==0):
+		print(range1,"is and even number")
+	else:
+		print(range1,"is an odd number")
+	range1 = range1 +1
+'''
+
+# Detect Prime Number
+'''
+num = int(input("Enter a number"))
+flag = 0 
+ctr = 2 
+while(ctr<num):
+	if(num%ctr==0):
+		flag = 1 
+		break 
+	ctr = ctr + 1
+if(flag == 0 and num >= 2):
+	print(num,"is a prime number")
+else:
+	print(num,"is not a prime number")
+'''
+
+# First 10 prime numbers
+rang = int(input("Enter a range"))
+num = 1
+count = 0
+while(True):
+	flag = 0 
+	ctr = 2 
+	while(ctr<num):
+		if(num%ctr==0):
+			flag = 1 
+			break 
+		ctr = ctr + 1
+	if(flag == 0 and num >= 2):
+		print(num,end = " ")
+		count = count +1 
+	num = num + 1
+	if(count == rang):
+		break
