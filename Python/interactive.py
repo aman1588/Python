@@ -799,7 +799,8 @@ else:
 	print(num,"is not a prime number")
 '''
 
-# First 10 prime numbers
+# First N prime numbers
+'''
 rang = int(input("Enter a range"))
 num = 1
 count = 0
@@ -813,7 +814,85 @@ while(True):
 		ctr = ctr + 1
 	if(flag == 0 and num >= 2):
 		print(num,end = " ")
-		count = count +1 
+		count = count +1      #(count+=1)
 	num = num + 1
 	if(count == rang):
 		break
+'''
+
+
+# Factorial Program
+'''
+num = int(input("Enter a number whose factorial is to be calculated"))
+n=num
+factorial=1
+while(num>0):
+	factorial = factorial * num
+	num = num - 1
+print("Factorial of %d is %d"%(n,factorial))
+'''
+
+
+# To print Factorial with number
+'''
+num = int(input("enter the number"))
+n=num
+factorial=1
+print(n,"!=",end=" ")
+while(num>0):
+	factorial=factorial*num
+	if(num == 1):
+		print(num,end=" ")
+	else:
+		print(num,end="*")
+	num = num-1
+print("=",factorial)
+'''
+# REVERSE A NUMBER
+'''
+n=int(input("enter the number"))
+rev=0
+while(n>0):
+	dig=n%10
+	rev=rev*10+dig
+	n=n//10
+print("reverse of digit ",rev)
+'''
+
+# PALINDROME NUMBER
+# 69696 = 69696
+'''
+num=int(input("enter the number"))
+n=num
+rev=0
+while(num>0):
+	rem=num%10
+	rev=rev*10+rem
+	num=num//10
+if(n==rev):
+	print(n,"is a palindrom")
+else:
+	print(n,"is not a palindrom")
+'''
+
+
+# ARMSTRONG NUMBER
+# 153 = 1**3+5**3+3**3=153
+num = int(input("enter a number"))
+n = num
+count = 0
+while (num>0):	
+	count = count + 1
+	num = num // 10
+print(count)
+num = n
+sum = 0 
+while(num>0):
+	rem = num % 10
+	sum = sum + rem**count
+	num = num // 10
+print(sum)
+if(n==sum):
+	print(n,"is an armstorng number")
+else:
+	print(n,"is not an armstrong number")
